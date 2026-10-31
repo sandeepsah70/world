@@ -132,7 +132,7 @@ export default function App() {
             {menuOpen ? '✕' : '☰'}
           </button>
 
-          <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+          <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>\n                <a href="#home" className="home-link" onClick={() => setMenuOpen(false)}>Home</a>\n                <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>\n                <a href="#what-we-do" onClick={() => setMenuOpen(false)}>What We Do</a>\n                <a href="#projects" onClick={() => setMenuOpen(false)}>Running Projects</a>\n                <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>\n                <a href="#blog" onClick={() => setMenuOpen(false)}>Blog & News</a>\n                <a href="#certificates" onClick={() => setMenuOpen(false)}>Certificates</a>\n                <a href="#partners" onClick={() => setMenuOpen(false)}>Partners</a>\n                <a href="#apply-franchise" onClick={() => setMenuOpen(false)}>Apply Franchise</a>\n                <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
             <a
               href="#home"
               className="home-link"
@@ -597,6 +597,45 @@ export default function App() {
       </section>
 
       {/* CERTIFICATES */}
+      {/* VERIFIED & REGISTERED WITH */}
+      <section className="verified-section" id="verified">
+        <div className="section-title" style={{textAlign:'center'}}>Verified & Registered With</div>
+        <div className="verified-subtitle">Government & Regulatory Bodies</div>
+        <div className="verified-logos">
+          <div className="verified-logo-card">
+            <div className="verified-icon"><span role="img" aria-label="MCA">🏛️</span></div>
+            <div className="verified-info">
+              <h4>MCA (Ministry of Corporate Affairs)</h4>
+              <p>Registered Non‑Profit</p>
+            </div>
+            <div className="verified-check">✔</div>
+          </div>
+          <div className="verified-logo-card">
+            <div className="verified-icon"><span role="img" aria-label="NITI Aayog">🗂️</span></div>
+            <div className="verified-info">
+              <h4>NITI Aayog</h4>
+              <p>NGO Registration</p>
+            </div>
+            <div className="verified-check">✔</div>
+          </div>
+          <div className="verified-logo-card">
+            <div className="verified-icon"><span role="img" aria-label="ISO">📜</span></div>
+            <div className="verified-info">
+              <h4>ISO 9001</h4>
+              <p>Quality Management</p>
+            </div>
+            <div className="verified-check">✔</div>
+          </div>
+          <div className="verified-logo-card">
+            <div className="verified-icon"><span role="img" aria-label="MSME">🏭</span></div>
+            <div className="verified-info">
+              <h4>MSME</h4>
+              <p>Micro‑Enterprise Registration</p>
+            </div>
+            <div className="verified-check">✔</div>
+          </div>
+        </div>
+      </section>
       <section className="cert-section" id="certificates">
         <h2 className="section-title">
           GOVERNMENT <span>RECOGNITION & CERTIFICATION</span>
@@ -638,6 +677,67 @@ export default function App() {
           <div className="partner-logo-box">🎓 Gramin Shiksha Vikas Samiti</div>
           <div className="partner-logo-box">🌱 UP Green Community Trust</div>
           <div className="partner-logo-box">🛡️ National Child Rights Alliance</div>
+        </div>
+      </section>
+
+      {/* FRANCHISE APPLY SECTION */}
+      <section className="franchise-page" id="apply-franchise">
+        <div className="franchise-hero">
+          <h1>Apply for Franchise</h1>
+          <p>Join Shikashvik Welfare Foundation as a certified franchise partner and make a difference in your community.</p>
+        </div>
+        <div className="franchise-content">
+          <div className="franchise-info">
+            <h2>Why Partner With Us?</h2>
+            <p>Our franchise model offers comprehensive support, training, and brand recognition to help you succeed.</p>
+            <ul className="franchise-benefits">
+              <li><span className="benefit-icon">✔</span> Established brand and goodwill</li>
+              <li><span className="benefit-icon">✔</span> Training & mentorship</li>
+              <li><span className="benefit-icon">✔</span> Marketing & promotional material</li>
+              <li><span className="benefit-icon">✔</span> Ongoing operational support</li>
+            </ul>
+          </div>
+          <div className="franchise-form-wrap">
+            <h2>Franchise Application Form</h2>
+            <p>Please fill in the details below. All fields marked with * are required.</p>
+            <form onSubmit={(e)=>{e.preventDefault(); alert('Application submitted (demo).');}}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Institute Name <span className="req">*</span></label>
+                  <input type="text" required />
+                </div>
+                <div className="form-group">
+                  <label>Contact Person <span className="req">*</span></label>
+                  <input type="text" required />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Mobile No. <span className="req">*</span></label>
+                  <input type="tel" required />
+                </div>
+                <div className="form-group">
+                  <label>Email <span className="req">*</span></label>
+                  <input type="email" required />
+                </div>
+              </div>
+              <div className="form-group">
+                <label>Address <span className="req">*</span></label>
+                <textarea required></textarea>
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <label>State <span className="req">*</span></label>
+                  <input type="text" required />
+                </div>
+                <div className="form-group">
+                  <label>Pincode <span className="req">*</span></label>
+                  <input type="text" required />
+                </div>
+              </div>
+              <button type="submit" className="franchise-submit">Submit Application</button>
+            </form>
+          </div>
         </div>
       </section>
 
