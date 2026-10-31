@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logoImg from './assets/logo.png'
 import './App.css'
 
 interface Slide {
@@ -76,11 +77,13 @@ export default function App() {
       <div className="top-header">
         <div className="top-container">
           <div className="contact-info">
-            <a href="tel:+918445020016">☎ +91-84450-20016</a>
+            <a href="tel:+918445020016">☎ +91 8445020016</a>
             <span>|</span>
             <a href="mailto:shikashvik@gmail.com">✉ shikashvik@gmail.com</a>
             <span>|</span>
-            <span>Incorporated: 23 October 2026</span>
+            <span>Date of Incorporation: October 23, 2026</span>
+            <span>|</span>
+            <span>📍 Etah, Uttar Pradesh</span>
           </div>
           <div className="top-actions">
             <a href="#about">Support</a>
@@ -113,8 +116,11 @@ export default function App() {
       <header className="main-header">
         <div className="nav-container">
           <a href="#home" className="logo" aria-label="Shikashvik Welfare Foundation">
-            <span className="logo-main">SHIKASHVIK</span>
-            <small>WELFARE FOUNDATION</small>
+            <img src={logoImg} alt="Shikashvik Welfare Foundation Logo" className="logo-img" />
+            <div className="logo-text-wrap">
+              <span className="logo-main">SHIKASHVIK</span>
+              <small>WELFARE FOUNDATION</small>
+            </div>
           </a>
 
           <button
@@ -224,14 +230,30 @@ export default function App() {
               Shikashvik <span>Welfare Foundation</span>
             </h2>
             <div className="about-line" />
-            <h4>Committed to Uplifting Communities in Etah, Uttar Pradesh & Beyond</h4>
+            <h4>Committed to Uplifting Communities in Etah, Uttar Pradesh & Across India</h4>
             <p>
               <strong>Shikashvik Welfare Foundation</strong> is a government-registered non-profit
-              organization incorporated on <strong>23 October 2026</strong>. Headquartered in Etah,
-              Uttar Pradesh, our foundational mission is to build an inclusive society where every
-              child receives quality education, families have access to essential healthcare, and
-              rural women achieve financial independence.
+              organization incorporated on <strong>October 23, 2026</strong>. With its registered
+              district in <strong>Etah, Uttar Pradesh, India</strong>, our foundational mission is
+              to build an equitable and thriving society through grassroots education, free medical care,
+              hunger eradication, and women empowerment.
             </p>
+
+            <div style={{ background: '#fcf8ff', borderLeft: '4px solid #4b087d', padding: '14px 18px', borderRadius: '4px', margin: '20px 0' }}>
+              <p style={{ margin: '4px 0', fontSize: '14px', color: '#333' }}>
+                🏛️ <strong>Date of Incorporation:</strong> October 23, 2026
+              </p>
+              <p style={{ margin: '4px 0', fontSize: '14px', color: '#333' }}>
+                📍 <strong>Registered District:</strong> Etah, Uttar Pradesh, India
+              </p>
+              <p style={{ margin: '4px 0', fontSize: '14px', color: '#333' }}>
+                🏢 <strong>Registered Address:</strong> C/o Ankit Shakya, Dhumari, Dhumari, Aliganj, Etah, Uttar Pradesh, India (PIN: 207248)
+              </p>
+              <p style={{ margin: '4px 0', fontSize: '14px', color: '#333' }}>
+                📞 <strong>Contact No:</strong> <a href="tel:+918445020016" style={{ color: '#4b087d', fontWeight: 700 }}>8445020016</a> | ✉️ <strong>Email:</strong> <a href="mailto:shikashvik@gmail.com" style={{ color: '#4b087d', fontWeight: 700 }}>shikashvik@gmail.com</a>
+              </p>
+            </div>
+
             <p>
               With grassroots volunteers and transparent community leadership, we identify vulnerable
               slums, remote hamlets, and underserved settlements to deliver direct interventions in
@@ -250,11 +272,17 @@ export default function App() {
           </div>
 
           <div className="about-logo">
-            <div className="logo-fallback">
-              <span>SWF</span>
-              <strong>SHIKASHVIK</strong>
-              <div className="logo-tag">Welfare Foundation</div>
-              <small style={{ marginTop: '8px', color: '#888' }}>Regd: Etah, Uttar Pradesh</small>
+            <div className="about-logo-card">
+              <img
+                src={logoImg}
+                alt="Shikashvik Welfare Foundation Official Logo"
+                className="about-logo-img"
+              />
+              <div className="about-badge-text">SHIKASHVIK WELFARE FOUNDATION</div>
+              <div className="about-badge-sub">Regd: Dhumari, Aliganj, Etah (U.P.) - 207248</div>
+              <div style={{ marginTop: '8px', fontSize: '11px', color: '#d59600', fontWeight: 'bold' }}>
+                Inc. Date: October 23, 2026
+              </div>
             </div>
           </div>
         </div>
@@ -397,7 +425,7 @@ export default function App() {
             />
             <div className="project-info">
               <h3>Project Swavlamban</h3>
-              <div className="project-country">📍 Etah & Surrounding Villages</div>
+              <div className="project-country">📍 Dhumari, Aliganj & Etah Villages</div>
               <p>
                 Vocational skill workshops teaching tailoring, stitching, and financial literacy to
                 women and teenage girls to foster sustainable household earnings.
@@ -578,7 +606,8 @@ export default function App() {
             <div className="cert-badge-box">🏛️</div>
             <p>Certificate of Incorporation</p>
             <small>Government of India | Ministry of Corporate Affairs</small>
-            <small style={{ color: '#d59600', fontWeight: 'bold' }}>Incorporated: 23 October 2026</small>
+            <small style={{ color: '#d59600', fontWeight: 'bold' }}>Date of Incorporation: October 23, 2026</small>
+            <small style={{ display: 'block', marginTop: '6px' }}>District: Etah, Uttar Pradesh, India</small>
           </div>
 
           <div className="cert-item">
@@ -586,6 +615,9 @@ export default function App() {
             <p>80G & 12A Compliant Non-Profit</p>
             <small>Tax Exemption for Donors under Section 80G of Income Tax Act</small>
             <small style={{ color: '#d59600', fontWeight: 'bold' }}>NITI Aayog NGO Darpan Registered</small>
+            <small style={{ display: 'block', marginTop: '6px' }}>
+              Address: C/o Ankit Shakya, Dhumari, Aliganj, Etah (UP) - 207248
+            </small>
           </div>
         </div>
         <div className="cert-dots">
@@ -613,14 +645,22 @@ export default function App() {
       <footer className="simple-footer" id="contact">
         <div className="footer-container">
           <div className="footer-col">
-            <h4>Shikashvik Welfare Foundation</h4>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              <img src={logoImg} alt="Logo" style={{ height: '50px', borderRadius: '6px', background: '#fff', padding: '2px' }} />
+              <div>
+                <h4 style={{ margin: 0, color: '#d59600' }}>SHIKASHVIK</h4>
+                <small style={{ color: '#fff', fontSize: '10px', letterSpacing: '1px' }}>WELFARE FOUNDATION</small>
+              </div>
+            </div>
             <p>
               Dedicated to creating lasting impact through education, healthcare, and economic
               self-reliance in Etah, Uttar Pradesh and across India.
             </p>
             <p>
-              <strong>Head Office:</strong> Etah, Uttar Pradesh - 207001, India<br />
-              <strong>Helpline:</strong> <a href="tel:+918445020016" style={{ color: '#fff' }}>+91-84450-20016</a><br />
+              <strong>Date of Incorporation:</strong> October 23, 2026<br />
+              <strong>Registered District:</strong> Etah, Uttar Pradesh, India<br />
+              <strong>Registered Address:</strong> C/o Ankit Shakya, Dhumari, Dhumari, Aliganj, Etah, Uttar Pradesh, India (PIN: 207248)<br />
+              <strong>Contact No:</strong> <a href="tel:+918445020016" style={{ color: '#fff' }}>8445020016</a> / <a href="tel:+918445020016" style={{ color: '#fff' }}>+91-84450-20016</a><br />
               <strong>Email:</strong> <a href="mailto:shikashvik@gmail.com" style={{ color: '#fff' }}>shikashvik@gmail.com</a>
             </p>
           </div>
@@ -651,7 +691,7 @@ export default function App() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Shikashvik Welfare Foundation. All rights reserved. Registered under Indian Trust & NGO Regulations.</p>
+          <p>© 2026 Shikashvik Welfare Foundation. All rights reserved. Registered Address: C/o Ankit Shakya, Dhumari, Aliganj, Etah, Uttar Pradesh - 207248.</p>
         </div>
       </footer>
 
@@ -666,7 +706,13 @@ export default function App() {
             >
               ✕
             </button>
-            <h3 className="modal-title">Support Shikashvik Foundation</h3>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              <img src={logoImg} alt="Logo" style={{ height: '44px' }} />
+              <div>
+                <h3 className="modal-title" style={{ margin: 0, fontSize: '18px' }}>Shikashvik Welfare Foundation</h3>
+                <small style={{ color: '#666' }}>Regd: Etah, Uttar Pradesh (PIN: 207248)</small>
+              </div>
+            </div>
             <p className="modal-desc">
               Your donation directly educates children, funds rural healthcare camps, and provides
               ration to needy families. Eligible for 80G tax exemption.
@@ -708,7 +754,7 @@ export default function App() {
 
                 <input
                   type="tel"
-                  placeholder="Mobile Number (e.g. 9876543210)"
+                  placeholder="Mobile Number (e.g. 8445020016)"
                   className="modal-input"
                   required
                   value={donorPhone}
@@ -716,7 +762,7 @@ export default function App() {
                 />
 
                 <div style={{ background: '#f5f0fa', padding: '10px', borderRadius: '4px', fontSize: '12px', color: '#4b087d', marginBottom: '14px' }}>
-                  <strong>UPI ID:</strong> shikashvik@upi | <strong>Help:</strong> +91-84450-20016
+                  <strong>UPI ID:</strong> shikashvik@upi | <strong>Help:</strong> 8445020016
                 </div>
 
                 <button type="submit" className="modal-submit">
@@ -742,7 +788,7 @@ export default function App() {
             <h3 className="modal-title">Member / Volunteer Portal</h3>
             <p className="modal-desc">Login to access internal records, volunteer shifts, and field donation logs.</p>
             <form onSubmit={(e) => { e.preventDefault(); alert('Login functionality will be activated with member credentials.'); setLoginModal(false); }}>
-              <input type="email" placeholder="Registered Email or Mobile" className="modal-input" required />
+              <input type="email" placeholder="Registered Email (shikashvik@gmail.com)" className="modal-input" required />
               <input type="password" placeholder="Password" className="modal-input" required />
               <button type="submit" className="modal-submit" style={{ background: '#4b087d' }}>
                 Secure Sign In
